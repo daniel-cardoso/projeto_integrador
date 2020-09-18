@@ -1,0 +1,16 @@
+com\procausas\redeProCausas\repository\PostagemRepository.class
+com\procausas\redeProCausas\controller\PostagemController.class
+com\procausas\redeProCausas\model\Usuario.class
+com\procausas\redeProCausas\model\UserLogin.class
+com\procausas\redeProCausas\seguranca\UserDetailsImpl.class
+com\procausas\redeProCausas\RedeProCausasApplication.class
+com\procausas\redeProCausas\config\SwaggerConfig.class
+com\procausas\redeProCausas\model\Postagem.class
+com\procausas\redeProCausas\repository\TemaRepository.class
+com\procausas\redeProCausas\service\UsuarioService.class
+com\procausas\redeProCausas\repository\UsuarioRepository.class
+com\procausas\redeProCausas\controller\UsuarioController.class
+com\procausas\redeProCausas\model\Tema.class
+com\procausas\redeProCausas\controller\TemaController.class
+com\procausas\redeProCausas\seguranca\BasicSecurityConfigure.class
+com\procausas\redeProCausas\seguranca\UserDetailsServiceImpl.class
