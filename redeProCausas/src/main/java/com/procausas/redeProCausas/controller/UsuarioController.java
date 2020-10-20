@@ -48,6 +48,11 @@ public class UsuarioController {
 	public ResponseEntity<Usuario> GetById(@PathVariable long id) {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
+	
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<List<Usuario>> getByName(@PathVariable String usuarioNome){
+		return ResponseEntity.ok(repository.findAllByUsuarioNomeContainingIgnoreCase(usuarioNome));
+	}
 
 
 	@PostMapping("/cadastrar")

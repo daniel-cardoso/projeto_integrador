@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +23,7 @@ public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long usuarioId;
 	
 	@NotNull
 	@Size(min = 2, max = 100)
@@ -31,6 +32,7 @@ public class Usuario {
 	@NotNull
 	@Size(min = 10, max = 50)
 	@Email
+	@Column(unique = true)
 	private String usuarioEmail;
 	
 	@NotNull
@@ -40,8 +42,13 @@ public class Usuario {
 	@NotNull
 	private Date usuarioNascimento;
 	
+	private String usuarioImagemUrl;
+	
+	private boolean usuarioAdmin;
+	
 	@NotNull
 	@Size(min = 5, max = 14)
+	@Column(unique = true)
 	private String usuarioDocumento;
 	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
@@ -49,11 +56,11 @@ public class Usuario {
 	private List<Postagem> postagem;
 
 	public long getId() {
-		return id;
+		return usuarioId;
 	}
 
 	public void setId(long id) {
-		this.id = id;
+		this.usuarioId = id;
 	}
 
 	public String getUsuarioNome() {
@@ -102,6 +109,22 @@ public class Usuario {
 
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
+	}
+
+	public String getUsuarioImagemUrl() {
+		return usuarioImagemUrl;
+	}
+
+	public void setUsuarioImagemUrl(String usuarioImagemUrl) {
+		this.usuarioImagemUrl = usuarioImagemUrl;
+	}
+
+	public boolean isUsuarioAdmin() {
+		return usuarioAdmin;
+	}
+
+	public void setUsuarioAdmin(boolean usuarioAdmin) {
+		this.usuarioAdmin = usuarioAdmin;
 	}
 	
 

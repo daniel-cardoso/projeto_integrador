@@ -23,21 +23,21 @@ public class Postagem {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
+	//@NotNull
 	@Size(min=5, max=100)
 	private String postTitulo;
 	
-	@NotNull
-	@Size(min=100, max=10000)
+	//@NotNull
+	@Size(min=10, max=10000)
 	private String postTexto;
 	
-	@NotNull
+	//@NotNull
 	private String postCidade;
 	
-	@NotNull
+	//@NotNull
 	private String postEstado;
 	
-	@NotNull
+	//@NotNull
 	private String postEndereco;
 	
 	private String postTag;

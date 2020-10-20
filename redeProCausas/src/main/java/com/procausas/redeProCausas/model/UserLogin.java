@@ -2,6 +2,8 @@ package com.procausas.redeProCausas.model;
 
 public class UserLogin {
 	
+	private long usuarioId;
+	
 	private String usuarioNome;
 	
 	private String usuarioEmail;
@@ -9,6 +11,10 @@ public class UserLogin {
 	private String usuarioSenha;
 	
 	private String usuarioToken;
+	
+	private String usuarioImagemUrl;
+	
+	private boolean usuarioAdmin;
 
 	public String getUsuarioNome() {
 		return usuarioNome;
@@ -41,6 +47,29 @@ public class UserLogin {
 	public void setUsuarioToken(String usuarioToken) {
 		this.usuarioToken = usuarioToken;
 	}
+
+	public String getUsuarioImagemUrl() {
+		return usuarioImagemUrl;
+	}
+
+	public void setUsuarioImagemUrl(String usuarioImagemUrl) {
+		this.usuarioImagemUrl = usuarioImagemUrl;
+	}
 	
+	public long getUsuarioId() {
+		return usuarioId;
+	}
+
+	public void setUsuarioId(long usuarioId) {
+		this.usuarioId = usuarioId;
+	}
+
+	public boolean isUsuarioAdmin() {
+		return usuarioAdmin;
+	}
+
+	public void setUsuarioAdmin(boolean usuarioAdmin) {
+		this.usuarioAdmin = usuarioAdmin;
+	}
 	
 }

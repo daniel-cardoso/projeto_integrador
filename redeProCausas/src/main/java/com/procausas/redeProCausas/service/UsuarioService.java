@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.Module.SetupContext;
 import com.procausas.redeProCausas.model.UserLogin;
 import com.procausas.redeProCausas.model.Usuario;
 import com.procausas.redeProCausas.repository.UsuarioRepository;
@@ -42,6 +43,10 @@ public class UsuarioService {
 
 				user.get().setUsuarioToken(authHeader);				
 				user.get().setUsuarioNome(usuario.get().getUsuarioNome());
+				user.get().setUsuarioId(usuario.get().getId());
+				user.get().setUsuarioImagemUrl(usuario.get().getUsuarioImagemUrl());
+				user.get().setUsuarioAdmin(usuario.get().isUsuarioAdmin());
+				
 
 				return user;
 
